@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+    },
+    "types": [
+      "@nuxt/types",
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "build.config.ts",
+  ],
+  "exclude": [
+    "src/module/templates/**/*",
+    "node_modules",
+    ".nuxt",
+    "dist",
+  ],
+}

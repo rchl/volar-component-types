@@ -1,0 +1,49 @@
+{
+  "name": "volar-component-types",
+  "version": "0.0.1",
+  "description": "A module that provides Volar types for auto-discovered components in Nuxt 2",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "type": "module",
+  "main": "dist/volar.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/volar.mjs",
+      "require": "./dist/volar.cjs"
+    },
+    "./nuxt": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "nuxt dev -c ./fixture/nuxt.config.ts",
+    "build": "unbuild"
+  },
+  "author": "Rafal Chlodnicki",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.22.5",
+    "@babel/traverse": "^7.22.5",
+    "@volar/language-core": "^1.7.10",
+    "upath": "^2.0.1"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.17.0",
+    "@types/node": "^18.16.18",
+    "eslint": "^8.43.0",
+    "eslint-config-rchl-typescript": "^1.0.1",
+    "eslint-config-rchl-vue": "^1.0.0",
+    "nuxt": "^2.17.0",
+    "sass": "^1.63.6",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "vue": "2",
+    "vue-router": "3"
+  }
+}

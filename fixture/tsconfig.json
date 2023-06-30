@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "../dist/module",
+    "./nuxt.config.ts",
+    "./components/**/*.vue",
+    "./pages/**/*.vue",
+  ],
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "strictTemplates": true,
+    "experimentalAdditionalLanguageModules": [".."]
+  }
+}
