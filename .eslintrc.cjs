@@ -5,6 +5,8 @@ module.exports = {
         'eslint-config-rchl-typescript',
     ],
     ignorePatterns: [
+        '!.eslintrc.js',
+        '!.release-it.cjs',
         'dist/**/*',
         'src/module/templates/*.*',
     ],
