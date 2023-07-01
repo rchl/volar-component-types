@@ -1,6 +1,6 @@
 {
   "name": "volar-component-types",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A module that provides Volar types for auto-discovered components in Nuxt 2",
   "publishConfig": {
     "access": "public",
