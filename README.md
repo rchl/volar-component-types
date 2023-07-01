@@ -4,11 +4,11 @@ A module that provides Volar types for auto-discovered components in Nuxt 2.
 
 ## Introduction
 
-Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-discovery) like Nuxt 3 but unlike Nuxt 3, it doesn't automatically generate types for those components so Volar (Vue Language Tools) is not able to type-check those unless they are explicitly imported (which defeats the purpose of auto-discovering). This module takes care of registering types for all auto-discovered components so that Volar is aware of those and can type-check them. Instead of generating a plain type definition file, it uses an experimental Volar feature (`experimentalAdditionalLanguageModules`) for that so that "Go to definition" in also supported properly in the editor. Not even Nuxt 3 supports that.
+Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-discovery) like Nuxt 3 but unlike Nuxt 3, it doesn't automatically generate types for those components so Volar (Vue Language Tools) is not able to type-check those unless they are explicitly imported (which defeats the purpose of auto-discovering). This module takes care of registering types for all auto-discovered components so that Volar is aware of those and can type-check them. Instead of generating a plain type definition file, it uses an experimental Volar feature (`experimentalAdditionalLanguageModules`) for that so that "Go to definition" in also supported properly in the editor (not even Nuxt 3 supports that).
 
 ## Setup
 
-1. Add `volar-component-types` to `buildModules` in `nuxt.config.js`.
+1. Add the module to `buildModules` in `nuxt.config.js`.
    ```js
    export default {
        buildModules: [
@@ -39,4 +39,4 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
    ```
 4. Run `nuxt dev`.
 
-The Nuxt module generates a `./.nuxt/components/volar-component-data.json` relative to `tsconfig.json` and the Volar Language Module expects to find it there. The location of the generated file is currently not configurable.
+This module generates a `./.nuxt/components/volar-component-data.json` file relative to the `tsconfig.json` and the Volar Language Module expects to find it there. The location of the generated file is currently not configurable.
