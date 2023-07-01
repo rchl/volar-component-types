@@ -24,6 +24,7 @@
   "scripts": {
     "dev": "nuxt dev -c ./fixture/nuxt.config.ts",
     "build": "unbuild",
+    "prepare": "pnpm build",
     "release": "release-it"
   },
   "author": "Rafal Chlodnicki",
