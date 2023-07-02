@@ -15,7 +15,15 @@
     },
     "./nuxt": {
       "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "require": "./dist/module.cjs",
+      "types": "./dist/module.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "nuxt": [
+        "./dist/module.d.ts"
+      ]
     }
   },
   "files": [
