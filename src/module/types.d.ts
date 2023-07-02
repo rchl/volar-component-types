@@ -1,7 +1,7 @@
 export type ComponentDefinition = {
     filePath: string;
     pascalName: string;
-    wrapComponent?: boolean;
+    exportName: string;
 };
 
 type Range = readonly [number, number];

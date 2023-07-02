@@ -19,26 +19,23 @@ export default <Module<ModuleConfiguration>> function VolarComponentTypesModule(
 
     nuxt.hook('components:extend', (components: ComponentDefinition[]) => {
         // Auto-discovered components.
-        const data: ComponentDefinition[] = components.map(component => ({ filePath: component.filePath, pascalName: component.pascalName }));
-
-        // Built-in components.
-        data.push({
-            filePath: path.resolve(this.options.buildDir, 'components', 'volar-nuxt-link'),
-            pascalName: 'NuxtLink',
-            wrapComponent: true,
+        const data: ComponentDefinition[] = components.map(component => {
+            return {
+                filePath: component.filePath,
+                pascalName: component.pascalName,
+                exportName: 'default',
+            };
         });
-
-        // Add Lazy* variants of components.
-        const lazyData: ComponentDefinition[] = [];
-        for (const component of data) {
-            const { filePath, pascalName, wrapComponent } = component;
-            lazyData.push({
-                filePath,
-                pascalName: `Lazy${pascalName}`,
-                wrapComponent,
-            });
-        }
-        data.push(...lazyData);
+        // Built-in components.
+        data.push(...['NuxtLink', 'Transition'].map(pascalName => {
+            return {
+                filePath: path.resolve(this.options.buildDir, 'components', 'volar-nuxt-types'),
+                pascalName,
+                exportName: pascalName,
+            };
+        }));
+        // Lazy* variants of components.
+        data.push(...data.map(component => ({ ...component, pascalName: `Lazy${component.pascalName}` })));
 
         const [code, mappings] = generateComponentTypes(data, this.options.rootDir);
 
@@ -48,8 +45,8 @@ export default <Module<ModuleConfiguration>> function VolarComponentTypesModule(
             options: { code, mappings },
         });
         this.addTemplate({
-            src: path.resolve(__dirname, 'templates', 'nuxt-link.d.ts'),
-            fileName: './components/volar-nuxt-link.d.ts',
+            src: path.resolve(__dirname, 'templates', 'nuxt-types.d.ts'),
+            fileName: './components/volar-nuxt-types.d.ts',
             options: { code, mappings },
         });
 
@@ -81,7 +78,7 @@ function indent(level: number, code: string): string {
 
 function generateComponentTypes(components: ComponentDefinition[], rootDir: string): [string, RangeMapping[]] {
     const definitions = components
-        .map(component => `${component.pascalName}: typeof import('./${path.relative(rootDir, component.filePath)}').default;`)
+        .map(component => `${component.pascalName}: typeof import('./${path.relative(rootDir, component.filePath)}').${component.exportName};`)
         .join('\n');
 
     const code = TEMPLATE.replace('/*IMPORTS*/', indent(8, definitions));

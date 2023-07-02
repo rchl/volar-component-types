@@ -6,6 +6,9 @@
     "./components/**/*.vue",
     "./pages/**/*.vue",
   ],
+  "compilerOptions": {
+    "noErrorTruncation": true
+  },
   "vueCompilerOptions": {
     "target": 2.7,
     "strictTemplates": true,
