@@ -1,5 +1,13 @@
 
 
+### [0.2.1](https://github.com/rchl/volar-component-types/compare/v0.2.0...v0.2.1) (2023-07-02)
+
+
+### Bug Fixes
+
+* add forgot d.ts file ([3657742](https://github.com/rchl/volar-component-types/commit/365774251f3785b2cecb4b1525ea917a783f18cb))
+* add type entry to fix tsc ([5bfb220](https://github.com/rchl/volar-component-types/commit/5bfb220d7cae92f615f9dc042b257be6a82bd9ca))
+
 ## [0.2.0](https://github.com/rchl/volar-component-types/compare/v0.1.1...v0.2.0) (2023-07-02)
 
 
