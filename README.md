@@ -8,7 +8,14 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
 
 ## Setup
 
-1. Add the module to `buildModules` in `nuxt.config.js`.
+1. Install `volar-component-types` package:
+   ```sh
+   # Npm
+   npm i -D volar-component-types
+   # Yarn
+   yarn add -D volar-component-types
+   ```
+2. Add the module to `buildModules` in `nuxt.config.js`.
    ```js
    export default {
        buildModules: [
@@ -16,7 +23,7 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
        ],
    }
    ```
-2. Set following options in `tsconfig.json`:
+3. Set following options in `tsconfig.json`:
    ```jsonc
    {
       // other options...
@@ -27,7 +34,7 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
       }
    }
    ```
-3. Extend `types` array in `tsconfing.json` to augment Nuxt Config with module configuration types.
+4. Extend `types` array in `tsconfing.json` to augment Nuxt Config with module configuration types.
    ```jsonc
    {
       "compilerOptions": {
@@ -37,6 +44,6 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
       }
    }
    ```
-4. Run `nuxt dev`.
+5. Run `nuxt dev`.
 
 This module generates a `./.nuxt/components/volar-component-data.json` file relative to the `tsconfig.json` and the Volar Language Module expects to find it there. The location of the generated file is currently not configurable.
