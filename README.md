@@ -46,4 +46,5 @@ Nuxt 2 [auto-discovers components](https://v2.nuxt.com/docs/features/component-d
    ```
 5. Run `nuxt dev`.
 
-This module generates a `./.nuxt/components/volar-component-data.json` file relative to the `tsconfig.json` and the Volar Language Module expects to find it there. The location of the generated file is currently not configurable.
+> **Note**
+> This module generates a `./.nuxt/components/volar-component-data.json` file relative to the `tsconfig.json` and the Volar Language Module expects to find it there. The location of the generated file is currently not configurable.
