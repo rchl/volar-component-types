@@ -1,10 +1,18 @@
-import path from 'path';
+import { posix } from 'path';
 import fs from 'fs';
-import { ScriptSnapshot } from 'typescript';
+import type { IScriptSnapshot } from 'typescript';
 import { FileKind, MirrorBehaviorCapabilities, type Language } from '@volar/language-core';
 import type { RangeMapping } from '../module/types';
 
-const TYPE_DEFINITION_VIRTUAL_FILE_NAME = 'generated-component-types.d.ts'
+const TYPE_DEFINITION_VIRTUAL_FILE_NAME = 'generated-component-types.d.ts';
+
+function scriptSnapshotFromString(text: string): IScriptSnapshot {
+    return {
+        getText: (start, end) => text.substring(start, end),
+        getLength: () => text.length,
+        getChangeRange: () => undefined,
+    };
+}
 
 const snapshotToMirrorMappings = new WeakMap();
 
@@ -50,9 +58,9 @@ const languageModule: Language = {
     resolveHost(host) {
         const vueTypesScript = {
             projectVersion: '' as string | number,
-            fileName: path.join(host.getCurrentDirectory(), TYPE_DEFINITION_VIRTUAL_FILE_NAME),
+            fileName: posix.join(host.getCurrentDirectory(), TYPE_DEFINITION_VIRTUAL_FILE_NAME),
             _version: 0,
-            _snapshot: ScriptSnapshot.fromString(''),
+            _snapshot: scriptSnapshotFromString(''),
             get version() {
                 this.update();
                 return this._version;
@@ -72,7 +80,7 @@ const languageModule: Language = {
                         // console.error(code);
                         // console.error(mirrorMappings);
                         this._version++;
-                        this._snapshot = ScriptSnapshot.fromString(code);
+                        this._snapshot = scriptSnapshotFromString(code);
                         snapshotToMirrorMappings.set(this._snapshot, mirrorMappings);
                     }
                 }
@@ -108,4 +116,4 @@ const languageModule: Language = {
 };
 
 // Not a "export default" so that it compiles to "module.exports".
-export = languageModule
+export = languageModule;
