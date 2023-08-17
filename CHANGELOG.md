@@ -1,5 +1,12 @@
 
 
+### [0.2.3](https://github.com/rchl/volar-component-types/compare/v0.2.2...v0.2.3) (2023-08-17)
+
+
+### Bug Fixes
+
+* adapt to latest volar breaking changes ([5f10b2d](https://github.com/rchl/volar-component-types/commit/5f10b2dd17f7c19490f528e966d8591f3d26dba6))
+
 ### [0.2.2](https://github.com/rchl/volar-component-types/compare/v0.2.1...v0.2.2) (2023-08-17)
 
 ### [0.2.1](https://github.com/rchl/volar-component-types/compare/v0.2.0...v0.2.1) (2023-07-02)
