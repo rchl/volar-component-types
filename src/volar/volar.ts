@@ -16,8 +16,8 @@ function scriptSnapshotFromString(text: string): IScriptSnapshot {
 
 const snapshotToMirrorMappings = new WeakMap();
 
-function readComponentTypes(hostDirectory: string): { code: string; mappings: RangeMapping[] } {
-    const componentDataFile = `${hostDirectory}/.nuxt/components/volar-component-data.json`;
+function readComponentTypes(workspacePath: string): { code: string; mappings: RangeMapping[] } {
+    const componentDataFile = `${workspacePath}/.nuxt/components/volar-component-data.json`;
 
     try {
         return JSON.parse(fs.readFileSync(componentDataFile, { encoding: 'utf-8' }));
@@ -58,7 +58,7 @@ const languageModule: Language = {
     resolveHost(host) {
         const vueTypesScript = {
             projectVersion: '' as string | number,
-            fileName: posix.join(host.getCurrentDirectory(), TYPE_DEFINITION_VIRTUAL_FILE_NAME),
+            fileName: posix.join(host.rootPath, TYPE_DEFINITION_VIRTUAL_FILE_NAME),
             _version: 0,
             _snapshot: scriptSnapshotFromString(''),
             get version() {
@@ -86,8 +86,7 @@ const languageModule: Language = {
                 }
             },
             generateCodeAndMappings() {
-                const hostDirectory = host.getCurrentDirectory();
-                const { code, mappings } = readComponentTypes(hostDirectory);
+                const { code, mappings } = readComponentTypes(host.rootPath);
                 const mirrorMappings = mappings.map(mapping => ({
                     data: [MirrorBehaviorCapabilities.full, MirrorBehaviorCapabilities.full],
                     sourceRange: mapping[0],

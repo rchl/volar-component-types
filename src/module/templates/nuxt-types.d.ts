@@ -8,7 +8,7 @@ type NuxtLinkProps = RouterLinkProps & {
 
 export const NuxtLink: DefineComponent<NuxtLinkProps>;
 
-type TransitionProps<HostElement> {
+type TransitionProps<HostElement> = {
   name?: string
   type?: AnimationTypes
   css?: boolean
