@@ -1,5 +1,7 @@
 
 
+### [0.2.2](https://github.com/rchl/volar-component-types/compare/v0.2.1...v0.2.2) (2023-08-17)
+
 ### [0.2.1](https://github.com/rchl/volar-component-types/compare/v0.2.0...v0.2.1) (2023-07-02)
 
 
