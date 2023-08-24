@@ -27,7 +27,7 @@
     "build.config.ts",
   ],
   "exclude": [
-    "src/module/templates/**/*",
+    "src/module/templates/**/*.ejs",
     "node_modules",
     ".nuxt",
     "dist",

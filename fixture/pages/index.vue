@@ -18,9 +18,3 @@ export default defineComponent({
     },
 });
 </script>
-
-<style lang="scss">
-.custom {
-    color: blue;
-}
-</style>
