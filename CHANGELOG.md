@@ -1,5 +1,12 @@
 
 
+### [0.2.4](https://github.com/rchl/volar-component-types/compare/v0.2.3...v0.2.4) (2023-08-24)
+
+
+### Bug Fixes
+
+* ignore built-in components for now ([7d1eed3](https://github.com/rchl/volar-component-types/commit/7d1eed33ad8257541251c08675cbcc0e0bcd3953))
+
 ### [0.2.3](https://github.com/rchl/volar-component-types/compare/v0.2.2...v0.2.3) (2023-08-17)
 
 
