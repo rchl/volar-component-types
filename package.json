@@ -38,25 +38,25 @@
   "author": "Rafal Chlodnicki",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.22.10",
-    "@babel/traverse": "^7.22.10",
-    "@volar/language-core": "^1.10.0",
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@volar/language-core": "^1.10.3",
     "upath": "^2.0.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.17.1",
     "@release-it/conventional-changelog": "^5.1.1",
-    "@types/node": "^18.17.5",
-    "eslint": "^8.47.0",
+    "@types/node": "^18.18.3",
+    "eslint": "^8.51.0",
     "eslint-config-rchl-typescript": "^1.0.1",
     "eslint-config-rchl-vue": "^1.0.0",
     "globby": "^13.2.2",
     "nuxt": "^2.17.1",
     "release-it": "^15.11.0",
-    "sass": "^1.65.1",
-    "typescript": "^5.1.6",
+    "sass": "^1.69.0",
+    "typescript": "^5.2.2",
     "unbuild": "^1.2.1",
-    "vue": "2",
-    "vue-router": "3"
+    "vue": "^2.7.14",
+    "vue-router": "^3.6.5"
   }
 }
