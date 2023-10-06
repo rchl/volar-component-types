@@ -1,17 +1,21 @@
 {
   "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noErrorTruncation": true,
+    "types": [
+      "../dist/module",
+    ]
+  },
   "include": [
     "../dist/module",
-    "./nuxt.config.ts",
     "./components/**/*.vue",
+    "./nuxt.config.ts",
     "./pages/**/*.vue",
+    "./volar-component-types.d.ts",
   ],
-  "compilerOptions": {
-    "noErrorTruncation": true
-  },
   "vueCompilerOptions": {
     "target": 2.7,
     "strictTemplates": true,
-    "experimentalAdditionalLanguageModules": [".."]
+    "experimentalAdditionalLanguageModules": ["../dist/volar.cjs"],
   }
 }

@@ -8,7 +8,7 @@ const config: NuxtConfig = {
         '../dist/module.mjs',
     ],
     volarComponentTypes: {
-        debug: true,
+        // debug: true,
     },
 };
 

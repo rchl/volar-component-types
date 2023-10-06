@@ -9,6 +9,8 @@ module.exports = {
         '!.release-it.cjs',
         'dist/**/*',
         'src/module/templates/*.*',
+        '**/*.vue.js',
+        '**/*.vue.ts',
     ],
     overrides: [
         {

@@ -2,7 +2,7 @@
     <transition key="foo"><div>hi from my component</div></transition>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 };
 </script>
