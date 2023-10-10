@@ -10,6 +10,14 @@
 
 * move generate function to own file ([acdef94](https://github.com/rchl/volar-component-types/commit/acdef9408944706ee49ea27b7de1df67f55a982f))
 
+## [0.3.1](https://github.com/rchl/volar-component-types/compare/v0.3.0...v0.3.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* **ci:** fix workflow ([4ab804a](https://github.com/rchl/volar-component-types/commit/4ab804afc73f1d164eec97887b5224fbfdee471c))
+* **ci:** random change to test releasing ([38e4fb3](https://github.com/rchl/volar-component-types/commit/38e4fb332a59ad134bbf26287dd657babc2995d4))
+
 ### [0.2.4](https://github.com/rchl/volar-component-types/compare/v0.2.3...v0.2.4) (2023-08-24)
 
 
