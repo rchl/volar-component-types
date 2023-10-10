@@ -18,12 +18,17 @@ jobs:
           package-name: volar-component-types
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"refactor","section":"Refactors","hidden":false}]'
       - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v3
+        if: ${{ steps.release.outputs.release_created }}
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: npm i -g pnpm
+      - name: Install PNPM
+        if: ${{ steps.release.outputs.release_created }}
+        run: npm i -g pnpm
       - name: Lint and Test
+        if: ${{ steps.release.outputs.release_created }}
         run: pnpm i --frozen-lockfile && pnpm build
       - name: Publish to NPM
         if: ${{ steps.release.outputs.release_created }}
