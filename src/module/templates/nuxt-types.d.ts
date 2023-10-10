@@ -1,12 +1,12 @@
-// import type { DefineComponent } from 'vue';
-// import type { RouterLinkProps } from 'vue-router/types/router';
+import type { DefineComponent } from 'vue';
+import type { RouterLinkProps } from 'vue-router/types/router';
 
-// type NuxtLinkProps = RouterLinkProps & {
-//     prefetch?: boolean;
-//     noPrefetch?: boolean;
-// };
+type NuxtLinkProps = RouterLinkProps & {
+    prefetch?: boolean;
+    noPrefetch?: boolean;
+};
 
-// export const NuxtLink: DefineComponent<NuxtLinkProps>;
+export const NuxtLink: DefineComponent<NuxtLinkProps>;
 
 // type TransitionProps<HostElement> = {
 //   name?: string
@@ -54,5 +54,3 @@
 // }
 
 // export const Transition: DefineComponent<TransitionProps<Element>>
-
-// export { NuxtLink, Transition }
