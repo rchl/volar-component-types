@@ -24,9 +24,10 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
+      - run: npm i -g pnpm
       - name: Lint and Test
         if: ${{ steps.release.outputs.release_created }}
-        run: pnpm i && pnpm build
+        run: pnpm i --frozen-lockfile && pnpm build
       - name: Publish to NPM
         if: ${{ steps.release.outputs.release_created }}
         run: pnpm publish
