@@ -1,4 +1,14 @@
+## [0.3.0](https://github.com/rchl/volar-component-types/compare/v0.2.4...v0.3.0) (2023-10-10)
 
+
+### Features
+
+* support NuxtLink ([2e0b8da](https://github.com/rchl/volar-component-types/commit/2e0b8dab894fc3ed4dd6defecd66db1f65fa1756))
+
+
+### Refactors
+
+* move generate function to own file ([acdef94](https://github.com/rchl/volar-component-types/commit/acdef9408944706ee49ea27b7de1df67f55a982f))
 
 ### [0.2.4](https://github.com/rchl/volar-component-types/compare/v0.2.3...v0.2.4) (2023-08-24)
 
