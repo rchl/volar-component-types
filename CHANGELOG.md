@@ -10,6 +10,13 @@
 
 * move generate function to own file ([acdef94](https://github.com/rchl/volar-component-types/commit/acdef9408944706ee49ea27b7de1df67f55a982f))
 
+## [0.4.1](https://github.com/rchl/volar-component-types/compare/v0.4.0...v0.4.1) (2023-12-01)
+
+
+### Bug Fixes
+
+* it's allowed to set any attribute on nuxt-child ([a052aaf](https://github.com/rchl/volar-component-types/commit/a052aaf1fc7873f8eed42cdc061b104c92e26ae5))
+
 ## [0.4.0](https://github.com/rchl/volar-component-types/compare/v0.3.1...v0.4.0) (2023-12-01)
 
 
