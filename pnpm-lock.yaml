@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^1.8.24
     version: 1.8.24(typescript@5.3.2)
   vuex:
-    specifier: ^3.6.2
-    version: 3.6.2(vue@2.7.15)
+    specifier: ^4.0.0
+    version: 4.1.0(vue@2.7.15)
 
 packages:
 
@@ -3440,6 +3440,10 @@ packages:
       - velocityjs
       - walrus
       - whiskers
+    dev: true
+
+  /@vue/devtools-api@6.5.1:
+    resolution: {integrity: sha512-+KpckaAQyfbvshdDW5xQylLni1asvNSGme1JFs8I1+/H5pHEhqUKMEQD/qn3Nx5+/nycBq11qAEi8lk+LXI2dA==}
     dev: true
 
   /@vue/language-core@1.8.24(typescript@5.3.2):
@@ -12587,6 +12591,15 @@ packages:
     peerDependencies:
       vue: ^2.0.0
     dependencies:
+      vue: 2.7.15
+    dev: true
+
+  /vuex@4.1.0(vue@2.7.15):
+    resolution: {integrity: sha512-hmV6UerDrPcgbSy9ORAtNXDr9M4wlNP4pEFKye4ujJF8oqgFFuxDCdOLS3eNoRTtq5O3hoBDh9Doj1bQMYHRbQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.1
       vue: 2.7.15
     dev: true
 
