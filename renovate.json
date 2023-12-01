@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base",
+    ":prHourlyLimit4",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "meteor": {
+    "enabled": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
+  "rangeStrategy": "auto",
+  "npm": {
+    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+  }
+}
