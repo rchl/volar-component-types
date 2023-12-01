@@ -10,16 +10,19 @@
       ],
     },
     "types": [
-      "../dist/module",
-    ]
+      "@nuxt/types",
+    ],
   },
   "include": [
     "./components/**/*.vue",
     "./pages/**/*.vue",
     "./nuxt.config.ts",
-    "./volar-component-types.d.ts",
-    "../types/*.ts",
+    // "./volar-component-types.d.ts",
+    // "../types/*.ts",
     "../dist/module",
+  ],
+  "exclude": [
+    "node_modules",
   ],
   "vueCompilerOptions": {
     "target": 2.7,

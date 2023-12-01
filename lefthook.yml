@@ -1,0 +1,14 @@
+colors: false
+
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      glob: "*.{js,ts,vue}"
+      run: pnpm eslint {staged_files}
+    typescript:
+      glob: "*.{js,ts,vue}"
+      run: pnpm tsc
+    vue-tsc:
+      glob: "*.{js,ts,vue}"
+      run: pnpm vue-tsc

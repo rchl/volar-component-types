@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
     "noErrorTruncation": true,
     "esModuleInterop": true,
     "allowJs": true,
@@ -10,14 +10,11 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
-    "types": [
-      "@nuxt/types",
-    ]
   },
   "include": [
     "src/**/*.ts",
     "build.config.ts",
-    "types/*.ts",
+    // "types/*.ts",
   ],
   "exclude": [
     "dist",
