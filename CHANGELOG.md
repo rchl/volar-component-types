@@ -10,6 +10,13 @@
 
 * move generate function to own file ([acdef94](https://github.com/rchl/volar-component-types/commit/acdef9408944706ee49ea27b7de1df67f55a982f))
 
+## [0.4.0](https://github.com/rchl/volar-component-types/compare/v0.3.1...v0.4.0) (2023-12-01)
+
+
+### Features
+
+* support for more built-in nuxt components ([33a13a6](https://github.com/rchl/volar-component-types/commit/33a13a63dcb3014231bd5351efe1868ee54d2304))
+
 ## [0.3.1](https://github.com/rchl/volar-component-types/compare/v0.3.0...v0.3.1) (2023-10-10)
 
 
