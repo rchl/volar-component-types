@@ -1,21 +1,49 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "noErrorTruncation": true,
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+    },
     "types": [
       "../dist/module",
     ]
   },
   "include": [
-    "../dist/module",
     "./components/**/*.vue",
-    "./nuxt.config.ts",
     "./pages/**/*.vue",
+    "./nuxt.config.ts",
     "./volar-component-types.d.ts",
+    "../types/*.ts",
+    "../dist/module",
   ],
   "vueCompilerOptions": {
     "target": 2.7,
     "strictTemplates": true,
     "experimentalAdditionalLanguageModules": ["../dist/volar.cjs"],
+    "experimentalModelPropName": {
+      "": {
+        "input": {
+          "type": "radio"
+        }
+      },
+      "checked": {
+        "input": {
+          "type": "checkbox"
+        }
+      },
+      "value": {
+        "input": true,
+        "select": true,
+        "textarea": true
+      },
+      "msg": {
+        "my-model": true
+      }
+    }
   }
 }

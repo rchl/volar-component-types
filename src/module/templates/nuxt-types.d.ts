@@ -1,5 +1,6 @@
-import type { DefineComponent } from 'vue';
-import type { RouterLinkProps } from 'vue-router/types/router';
+import { DefineComponent } from 'vue';
+import { ClientOnlyProps } from 'vue-client-only';
+import { RouterLinkProps } from 'vue-router/types/router';
 
 type NuxtLinkProps = RouterLinkProps & {
     prefetch?: boolean;
@@ -7,6 +8,25 @@ type NuxtLinkProps = RouterLinkProps & {
 };
 
 export const NuxtLink: DefineComponent<NuxtLinkProps>;
+
+export const ClientOnly: DefineComponent<ClientOnlyProps>;
+
+type NuxtProps = {
+    keepAlive?: boolean;
+    keepAliveProps?: object;
+    name?: string;
+    nuxtChildKey?: string;
+};
+
+export const Nuxt: DefineComponent<NuxtProps>;
+
+type NuxtChildProps = {
+    keepAlive?: boolean;
+    keepAliveProps?: object;
+    nuxtChildKey?: string;
+};
+
+export const NuxtChild: DefineComponent<NuxtChildProps>;
 
 // type TransitionProps<HostElement> = {
 //   name?: string

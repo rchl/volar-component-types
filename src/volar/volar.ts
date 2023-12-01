@@ -2,7 +2,7 @@ import { posix } from 'path';
 import fs from 'fs';
 import type { IScriptSnapshot } from 'typescript';
 import { FileKind, MirrorBehaviorCapabilities, type Language } from '@volar/language-core';
-import type { RangeMapping } from '../module/types';
+import type { CodeMapping, MirrorBehaviorMapping } from '../module/types';
 
 const TYPE_DEFINITION_VIRTUAL_FILE_NAME = 'generated-component-types.d.ts';
 
@@ -14,13 +14,13 @@ function scriptSnapshotFromString(text: string): IScriptSnapshot {
     };
 }
 
-const snapshotToMirrorMappings = new WeakMap();
+const snapshotToMirrorMappings = new WeakMap<IScriptSnapshot, MirrorBehaviorMapping>();
 
-function readComponentTypes(workspacePath: string): { code: string; mappings: RangeMapping[] } {
+function readComponentTypes(workspacePath: string): CodeMapping {
     const componentDataFile = `${workspacePath}/.nuxt/components/volar-component-data.json`;
 
     try {
-        return JSON.parse(fs.readFileSync(componentDataFile, { encoding: 'utf-8' }));
+        return JSON.parse(fs.readFileSync(componentDataFile, { encoding: 'utf-8' })) as CodeMapping;
     } catch (error) {
         console.error((error as Error).message);
         return { code: '', mappings: [] };
@@ -70,10 +70,7 @@ const languageModule: Language = {
                 return this._snapshot;
             },
             update() {
-                if (!this._snapshot) {
-                    return;
-                }
-                if (!host.getProjectVersion || host.getProjectVersion() !== this.projectVersion) {
+                if (host.getProjectVersion() !== this.projectVersion) {
                     this.projectVersion = host.getProjectVersion();
                     const { code, mirrorMappings } = this.generateCodeAndMappings();
                     if (code !== this._snapshot.getText(0, this._snapshot.getLength())) {
@@ -85,13 +82,13 @@ const languageModule: Language = {
                     }
                 }
             },
-            generateCodeAndMappings() {
+            generateCodeAndMappings(): { code: string; mirrorMappings: MirrorBehaviorMapping } {
                 const { code, mappings } = readComponentTypes(host.rootPath);
                 const mirrorMappings = mappings.map(mapping => ({
                     data: [MirrorBehaviorCapabilities.full, MirrorBehaviorCapabilities.full],
                     sourceRange: mapping[0],
                     generatedRange: mapping[1],
-                }));
+                })) as MirrorBehaviorMapping;
                 return { code, mirrorMappings };
             },
         };

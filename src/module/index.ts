@@ -17,6 +17,7 @@ export default <Module<ModuleConfiguration>> function VolarComponentTypesModule(
     const { nuxt, options } = this;
     const moduleOptions = options.volarComponentTypes ?? {};
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     nuxt.hook('components:extend', (components: ComponentDefinition[]) => {
         // Auto-discovered components.
         const data: ComponentDefinition[] = components.map(component => {
@@ -26,14 +27,16 @@ export default <Module<ModuleConfiguration>> function VolarComponentTypesModule(
                 exportName: 'default',
             };
         });
+
         // Built-in components.
-        data.push(...['NuxtLink'].map(pascalName => {
+        data.push(...['ClientOnly', 'Nuxt', 'NuxtChild', 'NuxtLink'].map(pascalName => {
             return {
                 filePath: path.resolve(this.options.buildDir, 'components', 'volar-nuxt-types'),
                 pascalName,
                 exportName: pascalName,
             };
         }));
+
         // Lazy* variants of components.
         data.push(...data.map(component => ({ ...component, pascalName: `Lazy${component.pascalName}` })));
 

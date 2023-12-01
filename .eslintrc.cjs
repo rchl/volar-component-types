@@ -1,3 +1,4 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
     root: true,
     extends: [
@@ -8,7 +9,7 @@ module.exports = {
         '!.eslintrc.js',
         '!.release-it.cjs',
         'dist/**/*',
-        'src/module/templates/*.*',
+        'src/module/templates/*.ejs',
         '**/*.vue.js',
         '**/*.vue.ts',
     ],
