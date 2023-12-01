@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(eslint@8.54.0)
   globby:
-    specifier: ^11.0.0
-    version: 11.1.0
+    specifier: ^14.0.0
+    version: 14.0.0
   lefthook:
     specifier: ^1.5.5
     version: 1.5.5
