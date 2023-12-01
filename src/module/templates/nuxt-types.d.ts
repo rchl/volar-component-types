@@ -24,6 +24,7 @@ type NuxtChildProps = {
     keepAlive?: boolean;
     keepAliveProps?: object;
     nuxtChildKey?: string;
+    [key: string]: any;
 };
 
 export const NuxtChild: DefineComponent<NuxtChildProps>;
