@@ -21,11 +21,5 @@ module.exports = {
                 tsconfigRootDir: __dirname,
             },
         },
-        {
-            files: ['*.vue'],
-            parserOptions: {
-                parser: '@typescript-eslint/parser',
-            },
-        },
     ],
 };
