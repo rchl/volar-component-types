@@ -46,7 +46,7 @@
   "dependencies": {
     "@babel/parser": "^7.23.5",
     "@babel/traverse": "^7.23.5",
-    "@volar/language-core": "^1.11.1",
+    "@volar/language-core": "^2.0.0",
     "upath": "^2.0.1"
   },
   "devDependencies": {
