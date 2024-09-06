@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/rchl/volar-component-types.git"
   },
+  "packageManager": "pnpm@8.15.9",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -44,31 +45,31 @@
   "author": "Rafal Chlodnicki",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.23.5",
-    "@babel/traverse": "^7.23.5",
+    "@babel/parser": "^7.25.6",
+    "@babel/traverse": "^7.25.6",
     "@volar/language-core": "^1.11.1",
     "upath": "^2.0.1"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.17.2",
+    "@nuxt/types": "^2.18.1",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@types/babel__traverse": "^7.20.4",
-    "@types/eslint": "^8.44.8",
-    "@types/node": "^18.19.0",
-    "eslint": "^8.54.0",
+    "@types/babel__traverse": "^7.20.6",
+    "@types/eslint": "^8.56.12",
+    "@types/node": "^18.19.50",
+    "eslint": "^8.57.0",
     "eslint-config-rchl-typescript": "^2.0.1",
     "eslint-config-rchl-vue": "^2.0.0",
-    "globby": "^11.0.0",
-    "lefthook": "^1.5.5",
-    "nuxt": "^2.17.2",
-    "release-it": "^17.0.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.2",
+    "globby": "^11.1.0",
+    "lefthook": "^1.7.15",
+    "nuxt": "^2.18.1",
+    "release-it": "^17.6.0",
+    "sass": "^1.78.0",
+    "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
-    "vue": "^2.7.15",
+    "vue": "^2.7.16",
     "vue-client-only": "^2.1.0",
     "vue-router": "^3.6.5",
-    "vue-tsc": "^1.8.24",
+    "vue-tsc": "^1.8.27",
     "vuex": "^3.6.2"
   }
 }
