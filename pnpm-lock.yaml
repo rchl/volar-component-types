@@ -26,7 +26,7 @@ importers:
         version: 2.18.1
       '@release-it/conventional-changelog':
         specifier: ^8.0.1
-        version: 8.0.1(release-it@17.6.0(typescript@5.5.4))
+        version: 8.0.2(release-it@17.6.0(typescript@5.5.4))
       '@types/babel__traverse':
         specifier: ^7.20.6
         version: 7.20.6
@@ -722,6 +722,18 @@ packages:
   '@babel/types@7.25.6':
     resolution: {integrity: sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==}
     engines: {node: '>=6.9.0'}
+
+  '@conventional-changelog/git-client@1.0.1':
+    resolution: {integrity: sha512-PJEqBwAleffCMETaVm/fUgHldzBE35JFk3/9LL6NUA5EXa3qednu+UT6M7E5iBu3zIQZCULYIiZ90fBYHt6xUw==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      conventional-commits-filter: ^5.0.0
+      conventional-commits-parser: ^6.0.0
+    peerDependenciesMeta:
+      conventional-commits-filter:
+        optional: true
+      conventional-commits-parser:
+        optional: true
 
   '@csstools/cascade-layer-name-parser@1.0.13':
     resolution: {integrity: sha512-MX0yLTwtZzr82sQ0zOjqimpZbzjMaK/h2pmlrLK7DCzlmiZLYFpoO94WmN1akRVo6ll/TdpHb53vihHLUMyvng==}
@@ -1498,9 +1510,9 @@ packages:
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
 
-  '@release-it/conventional-changelog@8.0.1':
-    resolution: {integrity: sha512-pwc9jaBYDaSX5TXw6rEnPfqDkKJN2sFBhYpON1kBi9T3sA9EOBncC4ed0Bv3L1ciNb6eqEJXPfp+tQMqVlv/eg==}
-    engines: {node: '>=18'}
+  '@release-it/conventional-changelog@8.0.2':
+    resolution: {integrity: sha512-WpnWWRr7O0JeLoiejLrPEWnnwFhCscBn1wBTAXeitiz2/Ifaol0s+t8otf/HYq/OiQOri2iH8d0CnVb72tBdIQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     peerDependencies:
       release-it: ^17.0.0
 
@@ -3552,6 +3564,11 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
+  git-semver-tags@8.0.0:
+    resolution: {integrity: sha512-N7YRIklvPH3wYWAR2vysaqGLPRcpwQ0GKdlqTiVN5w1UmCdaeY3K8s6DMKRCh54DDdzyt/OAB6C8jgVtb7Y2Fg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   git-up@7.0.0:
     resolution: {integrity: sha512-ONdIrbBCFusq1Oy0sC71F5azx8bVkvtZtMJAsv+a6lz5YAmbNnLD6HAB4gptHZVLPR8S2/kVN6Gab7lryq5+lQ==}
 
@@ -4462,6 +4479,10 @@ packages:
   meow@12.1.1:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
     engines: {node: '>=16.10'}
+
+  meow@13.2.0:
+    resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
+    engines: {node: '>=18'}
 
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
@@ -6456,8 +6477,8 @@ packages:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
 
-  type-fest@4.26.0:
-    resolution: {integrity: sha512-OduNjVJsFbifKb57UqZ2EMP1i4u64Xwow3NYXUtBbD4vIwJdQd4+xl8YDou1dlm4DVrtwT/7Ky8z8WyCULVfxw==}
+  type-fest@4.26.1:
+    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -7744,6 +7765,11 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
+  '@conventional-changelog/git-client@1.0.1':
+    dependencies:
+      '@types/semver': 7.5.8
+      semver: 7.6.3
+
   '@csstools/cascade-layer-name-parser@1.0.13(@csstools/css-parser-algorithms@2.7.1(@csstools/css-tokenizer@2.4.1))(@csstools/css-tokenizer@2.4.1)':
     dependencies:
       '@csstools/css-parser-algorithms': 2.7.1(@csstools/css-tokenizer@2.4.1)
@@ -8738,13 +8764,17 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
-  '@release-it/conventional-changelog@8.0.1(release-it@17.6.0(typescript@5.5.4))':
+  '@release-it/conventional-changelog@8.0.2(release-it@17.6.0(typescript@5.5.4))':
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 5.1.0
       conventional-recommended-bump: 9.0.0
+      git-semver-tags: 8.0.0
       release-it: 17.6.0(typescript@5.5.4)
       semver: 7.6.3
+    transitivePeerDependencies:
+      - conventional-commits-filter
+      - conventional-commits-parser
 
   '@rollup/plugin-alias@5.1.0(rollup@3.29.4)':
     dependencies:
@@ -11211,6 +11241,14 @@ snapshots:
       meow: 12.1.1
       semver: 7.6.3
 
+  git-semver-tags@8.0.0:
+    dependencies:
+      '@conventional-changelog/git-client': 1.0.1
+      meow: 13.2.0
+    transitivePeerDependencies:
+      - conventional-commits-filter
+      - conventional-commits-parser
+
   git-up@7.0.0:
     dependencies:
       is-ssh: 1.4.0
@@ -12116,6 +12154,8 @@ snapshots:
       readable-stream: 2.3.8
 
   meow@12.1.1: {}
+
+  meow@13.2.0: {}
 
   merge-source-map@1.1.0:
     dependencies:
@@ -13548,14 +13588,14 @@ snapshots:
     dependencies:
       find-up: 6.3.0
       read-pkg: 8.1.0
-      type-fest: 4.26.0
+      type-fest: 4.26.1
 
   read-pkg@8.1.0:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 7.1.1
-      type-fest: 4.26.0
+      type-fest: 4.26.1
 
   readable-stream@2.3.8:
     dependencies:
@@ -14363,7 +14403,7 @@ snapshots:
 
   type-fest@3.13.1: {}
 
-  type-fest@4.26.0: {}
+  type-fest@4.26.1: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
