@@ -1,8 +1,9 @@
 <template>
-    <transition key="foo"><div>hi from my component</div></transition>
+    <transition appear><div>hi from my component</div></transition>
 </template>
 
 <script lang="ts">
-export default {
-};
+import { defineComponent } from 'vue';
+
+export default defineComponent({});
 </script>

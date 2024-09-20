@@ -4,6 +4,7 @@
         <nuxt />
         <nuxt-child />
         <nuxt-link to="/">Hello Nuxt</nuxt-link>
+        <my-component :custom-prop="1" />
     </div>
 </template>
 

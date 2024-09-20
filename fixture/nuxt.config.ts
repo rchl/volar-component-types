@@ -5,11 +5,8 @@ const config: NuxtConfig = {
     telemetry: false,
     components: true,
     buildModules: [
-        '../dist/module.mjs',
+        '../dist/main.mjs',
     ],
-    volarComponentTypes: {
-        // debug: true,
-    },
 };
 
 export default config;
