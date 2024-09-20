@@ -10,6 +10,17 @@
 
 * move generate function to own file ([acdef94](https://github.com/rchl/volar-component-types/commit/acdef9408944706ee49ea27b7de1df67f55a982f))
 
+## [1.0.0](https://github.com/rchl/volar-component-types/compare/v0.4.1...v1.0.0) (2024-09-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Dropped volar module. See readme for updated configuration.
+
+### Features
+
+* generate plain definition file (drop experimental volar module) ([#37](https://github.com/rchl/volar-component-types/issues/37)) ([48e1e57](https://github.com/rchl/volar-component-types/commit/48e1e5758de5304385833dface280000876e46b1))
+
 ## [0.4.1](https://github.com/rchl/volar-component-types/compare/v0.4.0...v0.4.1) (2023-12-01)
 
 
