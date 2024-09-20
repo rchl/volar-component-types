@@ -1,3 +1,12 @@
+
+
+## [0.5.0](https://github.com/rchl/volar-component-types/compare/v0.4.1...v0.5.0) (2024-09-20)
+
+
+### Features
+
+* add types for built-in transition component ([4e94f85](https://github.com/rchl/volar-component-types/commit/4e94f85c0dd92d3b9acaa7696f0a48fcbe7931a7))
+
 ## [0.3.0](https://github.com/rchl/volar-component-types/compare/v0.2.4...v0.3.0) (2023-10-10)
 
 
