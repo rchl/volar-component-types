@@ -1,5 +1,5 @@
 <template>
-    <transition key="foo"><div>hi from my component</div></transition>
+    <transition><div>hi from my component</div></transition>
 </template>
 
 <script lang="ts">

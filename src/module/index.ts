@@ -29,7 +29,7 @@ export default <Module<ModuleConfiguration>> function VolarComponentTypesModule(
         });
 
         // Built-in components.
-        data.push(...['ClientOnly', 'Nuxt', 'NuxtChild', 'NuxtLink'].map(pascalName => {
+        data.push(...['ClientOnly', 'Nuxt', 'NuxtChild', 'NuxtLink', 'Transition'].map(pascalName => {
             return {
                 filePath: path.resolve(this.options.buildDir, 'components', 'volar-nuxt-types'),
                 pascalName,
