@@ -19,7 +19,7 @@ Nuxt 2, like Nuxt 3, [auto-discovers components](https://v2.nuxt.com/docs/featur
    ```js
    export default {
        buildModules: [
-          'volar-component-types/nuxt',
+          'volar-component-types',
        ],
    }
    ```
