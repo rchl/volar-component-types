@@ -39,7 +39,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.18.1",
     "@release-it/conventional-changelog": "^8.0.2",
-    "@types/eslint": "^8.56.12",
+    "@types/eslint": "^9.0.0",
     "@types/node": "^20.16.5",
     "chokidar": "3",
     "eslint": "^8.57.1",
