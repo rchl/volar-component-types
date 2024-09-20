@@ -41,7 +41,7 @@
     "@release-it/conventional-changelog": "^8.0.2",
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.16.5",
-    "chokidar": "3",
+    "chokidar": "4",
     "eslint": "^8.57.1",
     "eslint-config-rchl-typescript": "^2.0.1",
     "eslint-config-rchl-vue": "^2.0.0",

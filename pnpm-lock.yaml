@@ -16,7 +16,7 @@ importers:
     devDependencies:
       '@nuxt/types':
         specifier: ^2.18.1
-        version: 2.18.1(chokidar@3.6.0)(globby@11.1.0)
+        version: 2.18.1(chokidar@4.0.0)(globby@11.1.0)
       '@release-it/conventional-changelog':
         specifier: ^8.0.2
         version: 8.0.2(release-it@17.6.0(typescript@5.6.2))
@@ -27,8 +27,8 @@ importers:
         specifier: ^20.16.5
         version: 20.16.5
       chokidar:
-        specifier: '3'
-        version: 3.6.0
+        specifier: '4'
+        version: 4.0.0
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -2316,7 +2316,6 @@ packages:
 
   chokidar@2.1.8:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
-    deprecated: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -8517,7 +8516,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@nuxt/types@2.18.1(chokidar@3.6.0)(globby@11.1.0)':
+  '@nuxt/types@2.18.1(chokidar@4.0.0)(globby@11.1.0)':
     dependencies:
       '@types/babel__core': 7.20.5
       '@types/compression': 1.7.5
@@ -8534,7 +8533,7 @@ snapshots:
       '@types/webpack': 4.41.39
       '@types/webpack-bundle-analyzer': 3.9.5
       '@types/webpack-hot-middleware': 2.25.5
-      chokidar: 3.6.0
+      chokidar: 4.0.0
       globby: 11.1.0
 
   '@nuxt/utils@2.18.1':
