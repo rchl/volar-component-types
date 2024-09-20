@@ -12,13 +12,38 @@
     "noEmit": true,
   },
   "include": [
+    "./fixture/.nuxt/types/components.d.ts",
+    "./fixture/nuxt.config.ts",
+    "./fixture/**/*.vue",
     "src/**/*.ts",
     "build.config.ts",
-    // "types/*.ts",
   ],
   "exclude": [
     "dist",
     "node_modules",
-    "src/module/templates/**/*.ejs",
   ],
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "strictTemplates": true,
+    "experimentalModelPropName": {
+      "": {
+        "input": {
+          "type": "radio"
+        }
+      },
+      "checked": {
+        "input": {
+          "type": "checkbox"
+        }
+      },
+      "value": {
+        "input": true,
+        "select": true,
+        "textarea": true
+      },
+      "msg": {
+        "my-model": true
+      }
+    }
+  }
 }

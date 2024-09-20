@@ -3,16 +3,12 @@ import { defineBuildConfig } from 'unbuild';
 export default defineBuildConfig({
     entries: [
         {
-            name: 'volar',
-            input: './src/volar/volar.ts',
-        },
-        {
-            name: 'module',
-            input: './src/module/index.ts',
+            name: 'main',
+            input: './src/index.ts',
         },
         {
             builder: 'mkdist',
-            input: './src/module/templates/',
+            input: './src/templates/',
             outDir: './dist/templates',
         },
     ],
@@ -21,8 +17,10 @@ export default defineBuildConfig({
     declaration: true,
     externals: [
         '@nuxt/types',
-        '@volar/language-core',
         'typescript',
+        'vue',
+        'vue-client-only',
+        'vue-router',
     ],
     rollup: {
         emitCJS: true,

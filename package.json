@@ -6,29 +6,18 @@
     "type": "git",
     "url": "git+https://github.com/rchl/volar-component-types.git"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "type": "module",
-  "main": "dist/volar.cjs",
+  "main": "./dist/main.cjs",
   "exports": {
     ".": {
-      "import": "./dist/volar.mjs",
-      "require": "./dist/volar.cjs"
-    },
-    "./nuxt": {
-      "types": "./dist/module.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "nuxt": [
-        "./dist/module.d.ts"
-      ]
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.cjs"
     }
   },
   "files": [
@@ -45,31 +34,38 @@
   "author": "Rafal Chlodnicki",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.25.6",
-    "@babel/traverse": "^7.25.6",
-    "@volar/language-core": "^1.11.1",
     "upath": "^2.0.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.18.1",
-    "@release-it/conventional-changelog": "^8.0.1",
-    "@types/babel__traverse": "^7.20.6",
+    "@release-it/conventional-changelog": "^8.0.2",
     "@types/eslint": "^8.56.12",
-    "@types/node": "^18.19.50",
-    "eslint": "^8.57.0",
+    "@types/node": "^20.16.5",
+    "chokidar": "3",
+    "eslint": "^8.57.1",
     "eslint-config-rchl-typescript": "^2.0.1",
     "eslint-config-rchl-vue": "^2.0.0",
     "globby": "^11.1.0",
     "lefthook": "^1.7.15",
     "nuxt": "^2.18.1",
     "release-it": "^17.6.0",
-    "sass": "^1.78.0",
-    "typescript": "^5.5.4",
+    "sass": "^1.79.2",
+    "typescript": "^5.6.2",
     "unbuild": "^2.0.0",
     "vue": "^2.7.16",
     "vue-client-only": "^2.1.0",
     "vue-router": "^3.6.5",
-    "vue-tsc": "^1.8.27",
+    "vue-tsc": "^2.1.6",
     "vuex": "^3.6.2"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "@nuxt/types": {
+        "peerDependencies": {
+          "chokidar": "^3.5.3",
+          "globby": "^11.1.0"
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 <template>
     <div class="custom">
-        <my-component :custom-prop="1" class="foo" />
+        <my-component :custom-prop="1" />
+        <!-- <my-component class="foo" /> -->
         <my-component-no-props class="custom" />
         <my-model v-model="foo" />
     </div>
