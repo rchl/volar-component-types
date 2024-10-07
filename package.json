@@ -44,7 +44,7 @@
     "chokidar": "3",
     "eslint": "^8.57.1",
     "eslint-config-rchl-typescript": "^2.0.1",
-    "eslint-config-rchl-vue": "^2.0.0",
+    "eslint-config-rchl-vue": "^3.0.0",
     "globby": "^11.1.0",
     "lefthook": "^1.7.15",
     "nuxt": "^2.18.1",

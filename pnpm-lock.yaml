@@ -36,8 +36,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1(eslint@8.57.1)(typescript@5.6.2)
       eslint-config-rchl-vue:
-        specifier: ^2.0.0
-        version: 2.0.0(eslint@8.57.1)
+        specifier: ^3.0.0
+        version: 3.0.0(eslint@8.57.1)
       globby:
         specifier: ^11.1.0
         version: 11.1.0
@@ -3235,19 +3235,16 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-config-rchl-base@1.1.0:
-    resolution: {integrity: sha512-Uw7Zq2KHKAtXYBdSo/8fVY6O8HJvMn1SOwK9ai61nBUs0Tzygeb9trvbUeKwnTyhpMO0vCdhaP7TlnTnAU5SaA==}
-    peerDependencies:
-      eslint: ^8
-
   eslint-config-rchl-typescript@2.0.1:
     resolution: {integrity: sha512-0C7d9LNh1Wiwf/cfR3nmBVCJ+5tKccGCU+vUKtxLZDVMIzrcSDfn0u9eSueNLCSs4/eWY+CGuaat+c3XRDgFqw==}
     peerDependencies:
       eslint: ^8
       typescript: ^4 || ^5
 
-  eslint-config-rchl-vue@2.0.0:
-    resolution: {integrity: sha512-E1sjdCFu4vkaie+3b98NLUFOgO/L+s8p+lIdQlGUzhP9WRfKFv2vhAq31q5hsqaktqezN8uyr0vxIepa2+XWqA==}
+  eslint-config-rchl-vue@3.0.0:
+    resolution: {integrity: sha512-KqiLks0OhhzinrS+0R5+9osD1AkwjtiEYpOzVRrMEt4TzdavUi0JSs+7pzxNeAMtubvzteyW6oOb5Sn7Thdlkg==}
+    peerDependencies:
+      eslint: ^9
 
   eslint-plugin-vue@9.28.0:
     resolution: {integrity: sha512-ShrihdjIhOTxs+MfWun6oJWuk+g/LAhN+CiuOl/jjkG3l0F2AuK5NMTaWqyvBgkFtpYmyks6P4603mLmhNJW8g==}
@@ -3270,6 +3267,7 @@ packages:
   eslint@8.57.1:
     resolution: {integrity: sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -10832,10 +10830,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-rchl-base@1.1.0(eslint@8.57.1):
-    dependencies:
-      eslint: 8.57.1
-
   eslint-config-rchl-typescript@2.0.1(eslint@8.57.1)(typescript@5.6.2):
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2)
@@ -10845,12 +10839,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-config-rchl-vue@2.0.0(eslint@8.57.1):
+  eslint-config-rchl-vue@3.0.0(eslint@8.57.1):
     dependencies:
-      eslint-config-rchl-base: 1.1.0(eslint@8.57.1)
+      eslint: 8.57.1
       eslint-plugin-vue: 9.28.0(eslint@8.57.1)
     transitivePeerDependencies:
-      - eslint
       - supports-color
 
   eslint-plugin-vue@9.28.0(eslint@8.57.1):
