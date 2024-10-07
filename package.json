@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/rchl/volar-component-types.git"
   },
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
