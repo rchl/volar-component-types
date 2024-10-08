@@ -10,7 +10,6 @@ export default <Module> function VolarComponentTypesModule() {
     const templatesDir = path.join(__dirname, 'templates');
     const outputDir = path.join(this.options.buildDir, 'types');
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     nuxt.hook('components:extend', (components: ComponentDefinition[]) => {
         // Auto-discovered components.
         const definitions = components

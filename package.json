@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/rchl/volar-component-types.git"
   },
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -42,13 +42,14 @@
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.16.5",
     "chokidar": "3",
-    "eslint": "^8.57.1",
-    "eslint-config-rchl-typescript": "^2.0.1",
-    "eslint-config-rchl-vue": "^2.0.0",
+    "eslint": "^9.12.0",
+    "eslint-config-rchl-base": "^2.0.3",
+    "eslint-config-rchl-typescript": "^3.0.2",
+    "eslint-config-rchl-vue": "^3.0.0",
     "globby": "^11.1.0",
     "lefthook": "^1.7.15",
     "nuxt": "^2.18.1",
-    "release-it": "^17.6.0",
+    "release-it": "^17.7.0",
     "sass": "^1.79.2",
     "typescript": "^5.6.2",
     "unbuild": "^2.0.0",
