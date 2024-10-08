@@ -23,5 +23,5 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install PNPM
         run: npm i -g pnpm
-      - name: Lint and Test
-        run: pnpm i --frozen-lockfile && pnpm build
+      - name: Build and Lint
+        run: pnpm i --frozen-lockfile && pnpm build && pnpm lint
