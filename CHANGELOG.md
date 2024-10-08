@@ -1,4 +1,9 @@
+## [1.0.1](https://github.com/rchl/volar-component-types/compare/v1.0.0...v1.0.1) (2024-10-08)
 
+
+### Bug Fixes
+
+* update wrong instructions in the readme ([cdce8e2](https://github.com/rchl/volar-component-types/commit/cdce8e2078379a2ccecc2a37cd2fa8f3bb3b3b54))
 
 ## [1.0.0](https://github.com/rchl/volar-component-types/compare/v0.4.1...v1.0.0) (2024-09-20)
 
